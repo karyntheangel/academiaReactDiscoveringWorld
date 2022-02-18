@@ -1,13 +1,46 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.text-orange {
+  color: orange !important;
+}
+.orangeBtn{
+  background-color: orange!important;
+  border-color: rgb(255, 165, 0)!important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 166, 0, 0.438)!important;
+}
+.entryContainer {
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.349);
+  background-blend-mode: hue !important;
+  background-size: cover;
+}
+.descriptionContainer {
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.11);
+  background-blend-mode: hue !important;
+  background-size: cover;
+}
+.entryText {
+  padding-top: 25%;
+  text-align: start;
+  color: beige;
+}
+.bgRoundedIcon {
+  min-width: 25px;
+  min-height: 25px;
+}
+.entryOptions {
+  background-color: transparent !important;
+  border-color: transparent !important;
 }

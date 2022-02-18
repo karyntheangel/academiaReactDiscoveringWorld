@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "tittle": "Blue explosions",
+      "description": "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "category": "",
+      "imgUrl": "https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg",
+      "id": 1
+    },
+    {
+      "tittle": "Blue explosion2",
+      "description": "tempor incididunt ut labore et dolore magna aliqua. niam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "category": "",
+      "imgUrl": "https://cdn.pixabay.com/photo/2010/12/13/10/25/canape-2802_1280.jpg",
+      "id": 3
+    },
+    {
+      "tittle": "Get Lucky",
+      "description": "we, come too far",
+      "category": "Work",
+      "imgUrl": "https://cdn.pixabay.com/photo/2020/04/18/20/01/background-5060836_1280.jpg",
+      "id": 4
+    },
+    {
+      "tittle": "Sooo",
+      "description": "Lorem ipsum",
+      "category": "Lifestyle",
+      "imgUrl": "https://cdn.pixabay.com/photo/2020/04/18/20/01/background-5060836_1280.jpg",
+      "id": 6
+    },
+    {
+      "tittle": "Some ",
+      "description": "lorem ipsum",
+      "category": "",
+      "imgUrl": "https://cdn.pixabay.com/photo/2018/12/01/23/58/entrepreneur-3850511_1280.jpg",
+      "id": 11
+    },
+    {
+      "tittle": "Un mamut chiquitito",
+      "description": "Queria volar",
+      "category": "Lifestyle",
+      "imgUrl": "https://cdn.pixabay.com/photo/2016/01/15/21/06/prehistoric-1142403_1280.png",
+      "id": 12
+    }
+  ]
+}

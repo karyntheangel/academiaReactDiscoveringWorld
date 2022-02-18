@@ -1,0 +1,57 @@
+
+
+{
+      "posts": [
+        {
+            "id": 1,
+            "tittle": "Blue explosion",
+            "category": "Lifestyle",
+            "description":
+              "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "imgUrl":
+              "https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg",
+            "comments": [
+              {
+                "id": 1,
+                "comment":
+                  "Something fun is waiting for you here. What are you waiting for? Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "author": "Ceci"
+              },
+              {
+                "id": 2,
+                "comment":
+                  "The blues that can be seen here are simply out of this world. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "author": "Ed"
+              },
+              {
+                "id": 3,
+                "comment":
+                  "Lorem ipsim hardcoded! Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "author": "Angie"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "tittle": "The call of the mountains",
+            "category": "Travel",
+            "description":
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "imgUrl":
+              "https://cdn.pixabay.com/photo/2021/10/11/18/58/lake-6701636_1280.jpg",
+            "comments": [
+              {
+                "id": 1,
+                "comment": "wooooololo",
+                "author": "Tony"
+              },
+              {
+                "id": 2,
+                "comment": "Epic!",
+                "author": "Mariana"
+              }
+            ]
+          }
+
+      ]
+  }
