@@ -2,13 +2,20 @@ import { useParams } from "react-router-dom";
 import { Navbar, Container } from "react-bootstrap";
 import NavbarTitle from "../components/NavbarTitle";
 import { DataContext } from "../context/DataContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { Link, Outlet } from "react-router-dom";
-export default function Post() {
+import PostForm from "./PostForm";
+export default function  Post() {
   let params = useParams();
-  const { selEntry } = useContext(DataContext);
+
+  const { selEntry,setSelEntry, data } = useContext(DataContext); 
+
+  useEffect(() => {
+    setSelEntry(data.find(entry=> entry.id===parseInt(params.id)))
+  }, [data])
+ 
   return (
     <>
       <Navbar>
@@ -60,6 +67,12 @@ export default function Post() {
                 </div>
               </div>
             )): "No Comments here"}
+          </div>
+        </div>
+        <div className="d-flex justify-content-center">
+          <div className=" w-75 p-5">
+          <h5>Write a comment</h5>
+          <PostForm />
           </div>
         </div>
       </section>

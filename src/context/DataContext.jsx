@@ -33,7 +33,7 @@ const useFetch = (url, data, setData) => {
         // manejar error
         console.log(error);
       });
-  }, [url]);
+  }, []);
 
   return data;
 };
@@ -54,9 +54,20 @@ const deleteHandler = (id, setData, data) => {
 };
 
 const myHandlerSubmit = (entry, data, setData, setShowModal, selEntry) => {
-  const metod = selEntry.id ? "put" : "post";
-  const urlSufix = selEntry.id ? `/${selEntry.id}` : "";
-  var answer = window.confirm("Save post?");
+  let metod = "post";
+  let urlSufix = '';
+
+  if (selEntry.id) {
+    metod = "put";
+    urlSufix = `/${selEntry.id}`;
+
+    entry = {
+      ...data.find(_entry => _entry.id === selEntry.id),
+      ...entry
+    }
+  }
+
+  let answer = window.confirm("Save post?");
   answer === true &&
     axios({
       method: metod,
@@ -64,19 +75,22 @@ const myHandlerSubmit = (entry, data, setData, setShowModal, selEntry) => {
       data: entry,
     })
       .then(function (response) {
-        response.status === 200
-          ? (() => {
-              entry.id = selEntry.id;
-              let indexFinded = 0;
-              data.find((_entry, index) => {
-                indexFinded = index;
-                return _entry.id === entry.id;
-              });
-              data.splice(indexFinded, 1, entry);
-              setData([...data]);
-            })()
-          : setData([...data, response.data]);
+        if (response.status === 200) {
+          /*entry.id = selEntry.id; 
+           let indexFinded = 0;
+          data.find((_entry, index) => {
+            indexFinded = index;
+            return _entry.id === entry.id;
+          });
+          data.splice(indexFinded, 1, entry);
+          setData([...data]); */ //sabia que me estaba haciendo muchas chaquetas mentales aqui :'v , heredaba tambien un bug que quita los comentarios.
 
+          setData(
+            data.map((_entry) => _entry.id === selEntry.id ? entry : _entry)
+          );
+        } else {
+          setData([...data, response.data]);
+        }
         setShowModal(false);
       })
       .catch(function (error) {
@@ -85,12 +99,48 @@ const myHandlerSubmit = (entry, data, setData, setShowModal, selEntry) => {
       });
 };
 
+const postHandler = (allPost, setPost, setShowModal, comment, selEntry) => {
+  let postFinded = allPost.find((postF) => postF.id === selEntry.id);
+  if (postFinded.comments) {
+    const entry = {
+      ...postFinded,
+      comments: [
+        ...postFinded.comments,
+        {
+          id: postFinded.comments.length + 1,
+          ...comment,
+        },
+      ],
+    };
+    console.log(entry);
+    myHandlerSubmit(entry, allPost, setPost, setShowModal, selEntry);
+
+  } else {
+    console.log(postFinded);
+  }
+};
+
 const categoryArray = ["Travel", "Lifestyle", "Business", "Food", "Work"];
 
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState(contentDefault);
   const [category, setCategory] = useState("");
-  const [selEntry, setSelEntry] = useState({});
+  const [selEntry, setSelEntry] = useState(
+    {
+      id: 0,
+      tittle: "",
+      category: "",
+      description: "",
+      imgUrl: "",
+      comments: [
+        {
+          id: 0,
+          comment: "",
+          author: "",
+        },
+      ],
+    }
+  );
   const [showModal, setShowModal] = useState(false);
 
   const URL = "http://localhost:3001/posts";
@@ -110,6 +160,7 @@ export const DataProvider = ({ children }) => {
         setShowModal,
         deleteHandler,
         myHandlerSubmit,
+        postHandler,
       }}
     >
       {children}

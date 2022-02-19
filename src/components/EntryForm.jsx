@@ -51,8 +51,9 @@ const EntryForm = () => {
         <Form.Select
           aria-label="Default select example"
           {...register("category")}
+          defaultValue={selEntry.category}
         >
-          <option value="">Choose category of the post</option>
+          
           {categoryArray.map((indCategory) => (
             <option key={indCategory} value={indCategory}>{indCategory}</option>
           ))}

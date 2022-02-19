@@ -1,57 +1,75 @@
-
-
 {
-      "posts": [
+  "posts": [
+    {
+      "id": 1,
+      "tittle": "Blue explosions!",
+      "category": "Travel",
+      "description": "Una corta descripcion... blah blahh blah",
+      "imgUrl": "https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg",
+      "comments": [
         {
-            "id": 1,
-            "tittle": "Blue explosion",
-            "category": "Lifestyle",
-            "description":
-              "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "imgUrl":
-              "https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg",
-            "comments": [
-              {
-                "id": 1,
-                "comment":
-                  "Something fun is waiting for you here. What are you waiting for? Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "author": "Ceci"
-              },
-              {
-                "id": 2,
-                "comment":
-                  "The blues that can be seen here are simply out of this world. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "author": "Ed"
-              },
-              {
-                "id": 3,
-                "comment":
-                  "Lorem ipsim hardcoded! Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "author": "Angie"
-              }
-            ]
-          },
-          {
-            "id": 2,
-            "tittle": "The call of the mountains",
-            "category": "Travel",
-            "description":
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "imgUrl":
-              "https://cdn.pixabay.com/photo/2021/10/11/18/58/lake-6701636_1280.jpg",
-            "comments": [
-              {
-                "id": 1,
-                "comment": "wooooololo",
-                "author": "Tony"
-              },
-              {
-                "id": 2,
-                "comment": "Epic!",
-                "author": "Mariana"
-              }
-            ]
-          }
-
+          "id": 1,
+          "comment": "Something fun is waiting for you here. What are you waiting for? Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          "author": "Ceci"
+        },
+        {
+          "id": 2,
+          "comment": "The blues that can be seen here are simply out of this world. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          "author": "Ed"
+        },
+        {
+          "id": 3,
+          "comment": "Lorem ipsim hardcoded! Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          "author": "Angie"
+        }
       ]
-  }
+    },
+    {
+      "id": 2,
+      "tittle": "The call of the mountains",
+      "category": "Travel",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imgUrl": "https://cdn.pixabay.com/photo/2021/10/11/18/58/lake-6701636_1280.jpg",
+      "comments": [
+        {
+          "id": 1,
+          "comment": "wooooololo",
+          "author": "Tony"
+        },
+        {
+          "id": 2,
+          "comment": "Epic!",
+          "author": "Mariana"
+        }
+      ]
+    },
+    {
+      "tittle": "FOOD",
+      "description": "food",
+      "category": "Food",
+      "imgUrl": "https://cdn.pixabay.com/photo/2016/01/15/21/06/prehistoric-1142403_1280.png",
+      "id": 3
+    },
+    {
+      "tittle": "Some tittle",
+      "description": "gfhftyryrytfhgbvbn",
+      "category": "Work",
+      "imgUrl": "https://cdn.pixabay.com/photo/2010/12/13/10/25/canape-2802_1280.jpg",
+      "id": 4
+    },
+    {
+      "tittle": "Be a great customer ",
+      "description": "mnmnmnmbbvgfgfvcvc",
+      "category": "Business",
+      "imgUrl": "https://cdn.pixabay.com/photo/2018/12/01/23/58/entrepreneur-3850511_1280.jpg",
+      "id": 5
+    },
+    {
+      "tittle": "Intelligence",
+      "description": "iyiuyiutuytyrt",
+      "category": "Business",
+      "imgUrl": "https://cdn.pixabay.com/photo/2020/04/18/20/01/background-5060836_1280.jpg",
+      "id": 6
+    }
+  ]
+}
