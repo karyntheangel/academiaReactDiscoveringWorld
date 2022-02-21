@@ -1,5 +1,4 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavbarTitle from "./components/NavbarTitle";
 import { Navbar, Container, Button } from "react-bootstrap";
 import BtnGroup from "./components/BtnGroup";

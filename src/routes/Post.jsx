@@ -5,7 +5,7 @@ import { DataContext } from "../context/DataContext";
 import { useContext, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PostForm from "./PostForm";
 export default function  Post() {
   let params = useParams();
