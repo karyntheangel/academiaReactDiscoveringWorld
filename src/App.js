@@ -4,7 +4,6 @@ import NavbarTitle from "./components/NavbarTitle";
 import { Navbar, Container, Button } from "react-bootstrap";
 import BtnGroup from "./components/BtnGroup";
 import Entries from "./components/Entries";
-import Post from "./routes/Post";
 import EntryModal from "./components/EntryModal";
 import { useContext } from "react";
 import { DataContext } from "./context/DataContext";
@@ -13,7 +12,7 @@ import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const voidEntry = {
   id: undefined,
-  tittle: "",
+  title: "",
   category: "",
   description: "",
   imgUrl: "",

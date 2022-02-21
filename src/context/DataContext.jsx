@@ -1,11 +1,10 @@
 import React, { createContext, useState, useEffect } from "react";
-import { set } from "react-hook-form";
 export const DataContext = createContext();
 
 const contentDefault = [
   {
     id: 0,
-    tittle: "",
+    title: "",
     category: "",
     description: "",
     imgUrl: "",
@@ -62,8 +61,7 @@ const myHandlerSubmit = (entry, data, setData, setShowModal, selEntry) => {
     urlSufix = `/${selEntry.id}`;
 
     entry = {
-      ...data.find(_entry => _entry.id === selEntry.id),
-      ...entry
+      ...entry, ...data.find(_entry => _entry.id === selEntry.id)
     }
   }
 
@@ -76,15 +74,6 @@ const myHandlerSubmit = (entry, data, setData, setShowModal, selEntry) => {
     })
       .then(function (response) {
         if (response.status === 200) {
-          /*entry.id = selEntry.id; 
-           let indexFinded = 0;
-          data.find((_entry, index) => {
-            indexFinded = index;
-            return _entry.id === entry.id;
-          });
-          data.splice(indexFinded, 1, entry);
-          setData([...data]); */ //sabia que me estaba haciendo muchas chaquetas mentales aqui :'v , heredaba tambien un bug que quita los comentarios.
-
           setData(
             data.map((_entry) => _entry.id === selEntry.id ? entry : _entry)
           );
@@ -125,22 +114,7 @@ const categoryArray = ["Travel", "Lifestyle", "Business", "Food", "Work"];
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState(contentDefault);
   const [category, setCategory] = useState("");
-  const [selEntry, setSelEntry] = useState(
-    {
-      id: 0,
-      tittle: "",
-      category: "",
-      description: "",
-      imgUrl: "",
-      comments: [
-        {
-          id: 0,
-          comment: "",
-          author: "",
-        },
-      ],
-    }
-  );
+  const [selEntry, setSelEntry] = useState(contentDefault);
   const [showModal, setShowModal] = useState(false);
 
   const URL = "http://localhost:3001/posts";

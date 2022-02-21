@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { DataContext } from "../context/DataContext";
 
 const EntryForm = () => {
-  const { data,setData,setSelEntry, selEntry, categoryArray, setShowModal, myHandlerSubmit } =
+  const { data,setData, selEntry, categoryArray, setShowModal, myHandlerSubmit } =
     useContext(DataContext);
   const {
     register,
@@ -17,18 +17,18 @@ const EntryForm = () => {
   };
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
-      <Form.Group className="mb-3" controlId="formEntryTittle">
+      <Form.Group className="mb-3" controlId="formEntrytitle">
         <Form.Label>Title</Form.Label>
         <Form.Control
           type="text"
-          defaultValue={selEntry.tittle}
+          defaultValue={selEntry.title}
           placeholder="Title, max 50 characters in this field"
-          {...register("tittle", { required: true, maxLength: 30 })}
+          {...register("title", { required: true, maxLength: 30 })}
         />
         <div className="invalid-feedback m-2 d-block">
-          {(errors.tittle?.type === "required" &&
+          {(errors.title?.type === "required" &&
             "Text is required in this field") ||
-            (errors.tittle?.type === "maxLength" &&
+            (errors.title?.type === "maxLength" &&
               "Maximum 50 characters for this field")}
         </div>
       </Form.Group>

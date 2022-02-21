@@ -40,7 +40,7 @@ export default function  Post() {
           <div className="text-white text-center ml-4 ">
             <h2 className="display-4 fw-bolder" key={selEntry.id}>
               {" "}
-              {selEntry.tittle}
+              {selEntry.title}
             </h2>
           </div>
         </div>

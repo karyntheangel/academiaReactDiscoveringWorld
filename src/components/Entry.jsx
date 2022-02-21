@@ -20,7 +20,7 @@ export const Entry = ({ entry }) => {
           onClick={() => setSelEntry(entry)}
           to={`/posts/${entry.id}`}
         >
-          <h4 key={entry.id}> {entry.tittle}</h4>
+          <h4 key={entry.id}> {entry.title}</h4>
         </Link>
         <div>
           <p> {entry.comments ? entry.comments.length: '0'} comments on this post</p>
