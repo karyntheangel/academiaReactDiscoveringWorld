@@ -18,6 +18,9 @@ const contentDefault = [
   },
 ];
 
+const baseURL= "https://academi-react-discovertheworld.herokuapp.com";
+
+
 const axios = require("axios");
 
 const useFetch = (url, data, setData) => {
@@ -41,7 +44,7 @@ const deleteHandler = (id, setData, data) => {
   let answer = window.confirm("Delete post?");
   answer === true &&
     axios
-      .delete(`http://localhost:3001/posts/${id}`)
+      .delete(`${baseURL}/posts/${id}`)
       .then(function (response) {
         response.status === 200 &&
           setData(data.filter((data) => data.id != id));
@@ -69,7 +72,7 @@ const myHandlerSubmit = (entry, data, setData, setShowModal, selEntry) => {
   answer === true &&
     axios({
       method: metod,
-      url: `http://localhost:3001/posts${urlSufix}`,
+      url: `${baseURL}/posts${urlSufix}`,
       data: entry,
     })
       .then(function (response) {
@@ -117,7 +120,7 @@ export const DataProvider = ({ children }) => {
   const [selEntry, setSelEntry] = useState(contentDefault);
   const [showModal, setShowModal] = useState(false);
 
-  const URL = "http://localhost:3001/posts";
+  const URL = `${baseUrl}/posts`;
   useFetch(URL, data, setData);
 
   return (
