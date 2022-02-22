@@ -9,7 +9,7 @@ const BtnGroup = () => {
         <Button  variant="outline-secondary" onClick={()=>setCategory('All')}>
           All
         </Button>
-        {categoryArray.map((category)=> <Button  variant="outline-secondary" onClick={()=>setCategory(category)}>
+        {categoryArray.map((category)=> <Button key={category}  variant="outline-secondary" onClick={()=>setCategory(category)}>
           {category}
         </Button> )}
       </ButtonGroup>
