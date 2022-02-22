@@ -18,8 +18,7 @@ const contentDefault = [
   },
 ];
 
-const baseURL= "https://academi-react-discovertheworld.herokuapp.com";
-
+const baseURL = "https://academi-react-discovertheworld.herokuapp.com";
 
 const axios = require("axios");
 
@@ -57,15 +56,16 @@ const deleteHandler = (id, setData, data) => {
 
 const myHandlerSubmit = (entry, data, setData, setShowModal, selEntry) => {
   let metod = "post";
-  let urlSufix = '';
+  let urlSufix = "";
 
   if (selEntry.id) {
     metod = "put";
     urlSufix = `/${selEntry.id}`;
 
     entry = {
-       ...data.find(_entry => _entry.id === selEntry.id),...entry
-    }
+      ...data.find((_entry) => _entry.id === selEntry.id),
+      ...entry,
+    };
   }
 
   let answer = window.confirm("Save post?");
@@ -78,7 +78,7 @@ const myHandlerSubmit = (entry, data, setData, setShowModal, selEntry) => {
       .then(function (response) {
         if (response.status === 200) {
           setData(
-            data.map((_entry) => _entry.id === selEntry.id ? entry : _entry)
+            data.map((_entry) => (_entry.id === selEntry.id ? entry : _entry))
           );
         } else {
           setData([...data, response.data]);
@@ -106,9 +106,12 @@ const postHandler = (allPost, setPost, setShowModal, comment, selEntry) => {
     };
     console.log(entry);
     myHandlerSubmit(entry, allPost, setPost, setShowModal, selEntry);
-
   } else {
-    console.log(postFinded);
+    const objetOfComments = {
+      comments: [{ id: 1, author: comment.author, comment: comment.comment }],
+    };
+    const finalEntry = Object.assign(postFinded, objetOfComments);
+    myHandlerSubmit(finalEntry, allPost, setPost, setShowModal, selEntry);
   }
 };
 
