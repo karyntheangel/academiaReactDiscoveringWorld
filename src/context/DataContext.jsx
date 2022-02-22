@@ -120,7 +120,7 @@ export const DataProvider = ({ children }) => {
   const [selEntry, setSelEntry] = useState(contentDefault);
   const [showModal, setShowModal] = useState(false);
 
-  const URL = `${baseUrl}/posts`;
+  const URL = `${baseURL}/posts`;
   useFetch(URL, data, setData);
 
   return (
