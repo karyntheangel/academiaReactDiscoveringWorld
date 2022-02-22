@@ -38,7 +38,7 @@ const useFetch = (url, data, setData) => {
 };
 
 const deleteHandler = (id, setData, data) => {
-  var answer = window.confirm("Delete post?");
+  let answer = window.confirm("Delete post?");
   answer === true &&
     axios
       .delete(`http://localhost:3001/posts/${id}`)
