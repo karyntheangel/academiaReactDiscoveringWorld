@@ -64,7 +64,7 @@ const myHandlerSubmit = (entry, data, setData, setShowModal, selEntry) => {
     urlSufix = `/${selEntry.id}`;
 
     entry = {
-      ...entry, ...data.find(_entry => _entry.id === selEntry.id)
+       ...data.find(_entry => _entry.id === selEntry.id),...entry
     }
   }
 
